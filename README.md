@@ -1,26 +1,33 @@
 # Revenue Backlog Automation
 
-A finance-operations automation platform for services backlog normalization, project-level revenue analysis, FX handling, regional rollups, and management reporting.
+A finance-operations automation reference for services backlog normalization, project-level revenue analysis, FX handling, regional rollups, and management reporting.
 
-> **Portfolio note:** This public repository is sanitized. Public examples use synthetic projects, entities, FX rates, and financial values; no employer-specific data or proprietary identifiers are included.
+> **Working public demo:** Includes deterministic synthetic project data, FX conversion logic, management KPIs, an interactive Streamlit app, tests, and run instructions. See [`DEMO.md`](DEMO.md).
+
+> **Portfolio note:** Public examples use synthetic projects, currencies, FX rates, and financial values; no employer-specific data or proprietary identifiers are included.
+
+## Try It
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ## Business Problem
 
 Services and project-finance teams often receive backlog information from multiple regions, entities, and operational files. The data may use inconsistent formats, currencies, project attributes, and revenue classifications, making consolidation and management reporting labor-intensive.
 
-This project demonstrates an automated process that standardizes those inputs and produces a governed management view of backlog and future revenue.
+## Demo Capabilities
 
-## Core Capabilities
-
-- regional / project input ingestion
-- data normalization and validation
-- FX conversion logic
-- backlog classification
-- T&M / project backlog analysis
-- revenue-recognition-oriented views
-- entity and region rollups
-- management KPI generation
-- automated reporting outputs
+- 300-project synthetic services portfolio
+- multiple regions and currencies
+- USD normalization using explicit FX rates
+- Time & Materials / Fixed Fee / ASC 606 style classifications
+- recognized revenue vs remaining backlog
+- regional and project-type reporting
+- management KPI summary
 
 ## Reference Architecture
 
@@ -49,13 +56,17 @@ Regional Project Inputs
 
 ## Technology
 
-`Python` `Excel` `SQL` `Azure` `Finance Automation` `Project Accounting` `Revenue Operations`
+`Python` `Streamlit` `Pandas` `Plotly` `Excel` `SQL` `Azure` `Finance Automation` `Project Accounting` `Revenue Operations`
 
 ## Repository Structure
 
 ```text
 .
-├── README.md
+├── app.py
+├── core.py
+├── synthetic.py
+├── requirements.txt
+├── DEMO.md
 ├── docs/
 │   ├── case-study.md
 │   ├── architecture.md
@@ -64,24 +75,22 @@ Regional Project Inputs
 │   ├── fx-methodology.md
 │   ├── security.md
 │   └── runbook.md
-├── sample-data/
-├── src/
-├── sql/
-├── diagrams/
-├── screenshots/
 └── tests/
+    └── test_core.py
 ```
 
-## Portfolio Roadmap
+## Demo Status
 
 - [x] Public-safe project definition
-- [ ] Synthetic project / backlog dataset
-- [ ] FX and mapping examples
-- [ ] Automated output workbook
-- [ ] Architecture diagram
-- [ ] Management KPI screenshots
-- [ ] Demo walkthrough
+- [x] Synthetic project / backlog dataset
+- [x] FX normalization
+- [x] Project and regional reporting
+- [x] Interactive management dashboard
+- [x] Automated tests
+- [x] Methodology / controls documentation
+- [ ] Hosted live-demo URL
+- [ ] Recorded walkthrough
 
 ## Case-Study Angle
 
-The public version will demonstrate how fragmented regional backlog inputs can be transformed into a repeatable finance-operations process with standardized calculations, traceable mappings, and management-ready reporting.
+This public version demonstrates how fragmented regional backlog inputs can be transformed into a repeatable finance-operations process with standardized calculations, traceable mappings, and management-ready reporting.
