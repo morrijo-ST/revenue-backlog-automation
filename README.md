@@ -2,11 +2,15 @@
 
 A finance-operations automation reference for services backlog normalization, project-level revenue analysis, FX handling, regional rollups, and management reporting.
 
+> **Live demo:** https://revenue-backlog-automation.onrender.com
+
 > **Working public demo:** Includes deterministic synthetic project data, FX conversion logic, management KPIs, an interactive Streamlit app, tests, and run instructions. See [`DEMO.md`](DEMO.md).
 
 > **Portfolio note:** Public examples use synthetic projects, currencies, FX rates, and financial values; no employer-specific data or proprietary identifiers are included.
 
 ## Try It
+
+**Hosted:** https://revenue-backlog-automation.onrender.com
 
 ```bash
 python -m venv .venv
@@ -58,27 +62,6 @@ Regional Project Inputs
 
 `Python` `Streamlit` `Pandas` `Plotly` `Excel` `SQL` `Azure` `Finance Automation` `Project Accounting` `Revenue Operations`
 
-## Repository Structure
-
-```text
-.
-├── app.py
-├── core.py
-├── synthetic.py
-├── requirements.txt
-├── DEMO.md
-├── docs/
-│   ├── case-study.md
-│   ├── architecture.md
-│   ├── business-rules.md
-│   ├── data-dictionary.md
-│   ├── fx-methodology.md
-│   ├── security.md
-│   └── runbook.md
-└── tests/
-    └── test_core.py
-```
-
 ## Demo Status
 
 - [x] Public-safe project definition
@@ -88,9 +71,5 @@ Regional Project Inputs
 - [x] Interactive management dashboard
 - [x] Automated tests
 - [x] Methodology / controls documentation
-- [ ] Hosted live-demo URL
+- [x] Hosted live-demo URL
 - [ ] Recorded walkthrough
-
-## Case-Study Angle
-
-This public version demonstrates how fragmented regional backlog inputs can be transformed into a repeatable finance-operations process with standardized calculations, traceable mappings, and management-ready reporting.
